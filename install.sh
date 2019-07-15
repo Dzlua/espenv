@@ -23,14 +23,20 @@ if [ ! -d "./esp8266_toolchain" ]; then
 fi
 cd ./esp8266_toolchain
 
+# 下载
 wget -c $FILE -O $FILENAME
 
+# 解压
 echo Unzipping...
 tar -xf $FILENAME
 
+# 生产mkenv.sh
 echo Generating mkenv.sh...
+cd ../
 PROJ_DIR=`pwd`
 CONTENT="#!/bin/bash\nexport PATH=$PROJ_DIR/esp8266_toolchain/$BIN:"'$PATH'"\nexport IDF_PATH=$PROJ_DIR/ESP8266_RTOS_SDK"
-echo -e $CONTENT > ../mkenv.sh
+echo -e $CONTENT > ./mkenv.sh
 
 echo Done!
+
+# 请使用命令 > source mkenv.sh
