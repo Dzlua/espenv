@@ -13,7 +13,7 @@ fi
 FILENAME=`basename $FILE`
 
 # 安装依赖包
-sudo apt install gcc git wget make libncurses5 flex bison gperf python python-pip python-setuptools python-serial python-cryptography python-future
+sudo apt install gcc git wget make libncurses5-dev flex bison gperf python python-pip python-setuptools python-serial python-cryptography python-future
 
 echo -e
 
