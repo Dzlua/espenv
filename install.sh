@@ -17,7 +17,7 @@ sudo apt install gcc git wget make libncurses5-dev flex bison gperf python pytho
 
 echo -e
 
-pip install --upgrade pip
+# pip install --upgrade pip
 pip install -r ./ESP8266_RTOS_SDK/requirements.txt
 
 # 安装编译工具
@@ -31,7 +31,7 @@ wget -c $FILE -O $FILENAME
 
 # 解压
 echo Unzipping...
-tar -xf $FILENAME
+tar -xvf $FILENAME
 
 # 生产mkenv.sh
 echo Generating mkenv.sh...
@@ -40,6 +40,7 @@ PROJ_DIR=`pwd`
 CONTENT="#!/bin/bash\nexport PATH=$PROJ_DIR/esp8266_toolchain/$BIN:"'$PATH'"\nexport IDF_PATH=$PROJ_DIR/ESP8266_RTOS_SDK"
 echo -e $CONTENT > ./mkenv.sh
 
-echo Done!
+echo -e Done!
+echo -e 'Use \"source mkenv.sh\" to export PATH and IDF_PATH.'
 
 # 请使用命令 > source mkenv.sh
