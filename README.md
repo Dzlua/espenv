@@ -9,8 +9,18 @@ https://www.cnblogs.com/dzlua/p/11194343.html
 ```
 
 ## 克隆 代码
+
+国内速度较慢
 github: https://github.com/Dzlua/espenv.git
+```
+git clone --recursive https://github.com/Dzlua/espenv.git
+```
+
+国内速度较快
 gitee : https://gitee.com/dzlua/espenv.git
+```
+git clone --recursive https://gitee.com/dzlua/espenv.git
+```
 
 ```
 [dzlua@ubuntu:~]$ git clone --recursive https://gitee.com/dzlua/espenv.git
