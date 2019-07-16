@@ -40,8 +40,8 @@ PROJ_DIR=`pwd`
 CONTENT="#!/bin/bash\nexport PATH=$PROJ_DIR/esp8266_toolchain/$BIN:"'$PATH'"\nexport IDF_PATH=$PROJ_DIR/ESP8266_RTOS_SDK"
 echo -e $CONTENT > ./mkenv.sh
 
-cp -rf $PROJ_DIR/ESP8266_RTOS_SDK/examples/get-started/project_template ./
-mv project_template test
+# 生成例子文件
+cp -rf ./ESP8266_RTOS_SDK/examples ./
 
 echo -e Done!
 echo -e 'Use \"source mkenv.sh\" to export PATH and IDF_PATH.'
