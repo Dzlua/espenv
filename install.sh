@@ -17,8 +17,8 @@ sudo apt install gcc git wget make libncurses5-dev flex bison gperf python pytho
 
 echo -e
 
-pip install --upgrade pip
-pip install -r ./ESP8266_RTOS_SDK/requirements.txt
+sudo pip install --upgrade pip
+sudo pip install -r ./ESP8266_RTOS_SDK/requirements.txt
 
 # 安装编译工具
 if [ ! -d "./esp8266_toolchain" ]; then
@@ -31,7 +31,7 @@ wget -c $FILE -O $FILENAME
 
 # 解压
 echo Unzipping...
-tar -xvf $FILENAME
+tar -xf $FILENAME
 
 # 生产mkenv.sh
 echo Generating mkenv.sh...
